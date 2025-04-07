@@ -9,41 +9,41 @@ const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900">
       <Navbar />
 
-
+      {/* Time Card */}
       <div className="p-6 flex justify-center items-center">
         <div className="shadow-xl shadow-black/40 rounded-xl">
           <TimeCard />
         </div>
       </div>
 
-      <div className="greet text-white text-center text-[22px]">
+      {/* Greeting Text */}
+      <div className="text-white text-center text-lg sm:text-xl md:text-2xl font-medium mt-4 px-4">
         Hey User, Ready to conquer your tasks?
       </div>
 
-      <div className="task-info text-white text-center text-[22px] mt-5 flex items-center justify-center gap-2">
-        <span className="fire-glow">🔥</span>
-        You’ve completed <div className='text-blue-400' >3</div> tasks today! Keep going!
+      {/* Task Info */}
+      <div className="text-white text-center text-base sm:text-lg md:text-xl mt-4 flex flex-wrap items-center justify-center gap-2 px-4">
+        <span className="fire-glow text-xl">🔥</span>
+        You’ve completed <div className="text-blue-400 font-semibold">3</div> tasks today! Keep going!
       </div>
 
-
-      {/* buttons */}
-      <div className="flex items-center justify-evenly mt-20 gap-6">
-        <Button className="h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-6 py-2 rounded-lg transition-all duration-300">
+      {/* Action Buttons */}
+      <div className="flex flex-col sm:flex-row items-center justify-center mt-10 gap-6 sm:gap-8 px-4">
+        <Button className="w-auto sm:w-auto h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-4 sm:px-6 rounded-lg transition-all duration-300 text-sm sm:text-base">
           View My Project
         </Button>
-        <Button className="h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-6 py-2 rounded-lg transition-all duration-300">
+        <Button className="w-auto sm:w-auto h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-4 sm:px-6 rounded-lg transition-all duration-300 text-sm sm:text-base">
           Create New Task
         </Button>
-        <Button className="h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-6 py-2 rounded-lg transition-all duration-300">
-          Open Calender
+        <Button className="w-auto sm:w-auto h-12 bg-gradient-to-r from-[#4A90E2] to-[#1F62B1] hover:from-[#5aa2f0] hover:to-[#3576d0] text-white px-4 sm:px-6 rounded-lg transition-all duration-300 text-sm sm:text-base">
+          Open Calendar
         </Button>
       </div>
 
-
-      <div className="mt-20">
+      {/* Cards Section */}
+      <div className="mt-16 px-4">
         <CardGrid />
       </div>
-
     </div>
   );
 };

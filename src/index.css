@@ -131,7 +131,7 @@
     text-shadow:
       0 0 4px #ff5722,
       0 0 6px #ff784e;
-    transform: translateY(-2px) scale(1.05); /* gentle upward flicker */
+    transform: translateY(-2px) scale(1.55); /* gentle upward flicker */
   }
 }
 

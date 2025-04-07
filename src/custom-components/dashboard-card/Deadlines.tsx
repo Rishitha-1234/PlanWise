@@ -15,38 +15,38 @@ const deadlines = [
 
 const DeadlinesCard = () => {
   return (
-    <div className="bg-[#111111] p-6 rounded-xl text-white font-sans w-auto min-h-90">
-      <h2 className="text-xl font-semibold mb-8">Upcoming Deadlines</h2>
-
+    <div className="bg-[#111111] hover:-translate-y-1 p-6 rounded-2xl shadow-lg w-auto text-white font-sans min-h-90 transition-shadow duration-300 hover:shadow-purple-800/30 hover:shadow-2xl">
       <div className="text-white text-m mb-5 flex items-center gap-3">
-      <AlarmClock className="w-8 h-8 text-violet-400 animate-ring drop-shadow-[0_0_6px_#a78bfa]" />
-
-
+        <AlarmClock className="w-7 h-7 text-violet-400 animate-ring drop-shadow-[0_0_6px_#a78bfa]" />
         <span>
-          <span className="text-amber-600 font-medium text-xl">
+          <span className="text-amber-500 font-semibold text-xl">
             {deadlines.length}
           </span>{" "}
           deadlines this week!
         </span>
       </div>
 
-      <div className="space-y-3 text-m">
+      <div className="mb-6 space-y-4">
         {deadlines.map((item, index) => (
-          <div key={index} className={`${item.color} font-medium`}>
-            {item.title} - {item.due}
+          <div
+            key={index}
+            className={`flex items-center gap-3 font-medium cursor-pointer transition-all hover:translate-x-1 ${item.color}`}
+          >
+            <div className="w-2 h-2 bg-current rounded-full"></div>
+            <span>{item.title} - {item.due}</span>
           </div>
         ))}
       </div>
 
-      <div className="group w-full mt-8">
-            <button className="bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-500 text-white py-2 px-4 mx-auto rounded-md w-auto transition duration-200 hover:shadow-xl flex items-center justify-center gap-2">
-                <span>View all Deadlines</span>
-                <ArrowRight
-                className="w-4 h-4 transform transition-all duration-200 translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-                style={{ minWidth: "1rem" }} // reserve space even when hidden
-                />
-            </button>
-        </div>
+      <div className="group w-full">
+        <button className="bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-500 text-white py-2 px-4 mx-auto rounded-md w-auto transition duration-200 hover:shadow-xl flex items-center justify-center gap-2">
+          <span>View all Deadlines</span>
+          <ArrowRight
+            className="w-4 h-4 transform transition-all duration-200 translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+            style={{ minWidth: "1rem" }}
+          />
+        </button>
+      </div>
     </div>
   );
 };
