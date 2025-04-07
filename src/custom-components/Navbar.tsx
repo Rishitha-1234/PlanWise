@@ -5,8 +5,6 @@ import {
   Bell,
   Settings,
   Search,
-  Menu,
-  User,
 } from "lucide-react";
 
 const Navbar = () => {
