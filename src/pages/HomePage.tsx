@@ -4,4 +4,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePageECHO is on.
+export default HomePage
