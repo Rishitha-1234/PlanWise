@@ -12,7 +12,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <div className="bg-[#252525] w-full h-20 px-6 flex items-center shadow">
+    <div className="bg-[#252525] w-full h-15 px-6 flex items-center shadow">
       <div className="w-full flex items-center justify-between">
         {/* Left Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="w-[400px] h-12 pl-10 pr-2 rounded bg-stone-100 text-black text-base font-medium outline-none"
+              className="w-[400px] h-10 pl-10 pr-2 rounded bg-stone-100 text-black text-base font-medium outline-none"
             />
           </div>
 
