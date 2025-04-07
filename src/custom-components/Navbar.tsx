@@ -6,6 +6,7 @@ import {
   Settings,
   Search,
 } from "lucide-react";
+import SideNav from "./SideNav";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -14,10 +15,14 @@ const Navbar = () => {
   return (
     <div className="bg-[#252525] w-full h-15 px-6 flex items-center shadow">
       <div className="w-full flex items-center justify-between">
-        {/* Left Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <Calendar size={26} className="text-white" />
-          <span className="text-white font-semibold text-xl">PlanWise</span>
+        {/* SideNav and Left Logo */}
+        <div className="flex items-center gap-4">
+        <SideNav />
+
+          <div className="flex items-center gap-2 cursor-pointer">
+            <Calendar size={26} className="text-white" />
+            <span className="text-white font-semibold text-xl">PlanWise</span>
+          </div>
         </div>
 
         {/* Center: Search Bar */}
