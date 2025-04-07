@@ -35,7 +35,6 @@ import {
   PlusCircle,
   FolderPlus,
   Wrench,
-  X,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
