@@ -21,13 +21,13 @@ const TaskCard = () => {
   const progressPercent = (completed / total) * 100;
 
   return (
-    <div className="bg-[#111111] p-6 rounded-2xl shadow-lg w-auto text-white font-sans min-h-90">
+    <div className="bg-[#111111] hover:-translate-y-1 p-6 rounded-2xl shadow-lg w-auto text-white font-sans min-h-90 transition-shadow duration-300 hover:shadow-purple-800/30 hover:shadow-2xl">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-semibold">Tasks</h2>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button className="text-white text-lg hover:scale-110 transition-transform duration-200">
+              <Button className="text-white text-lg hover:scale-110 bg-purple-700 hover:bg-purple-600 transition-transform duration-200">
                 +
               </Button>
             </TooltipTrigger>
@@ -50,11 +50,11 @@ const TaskCard = () => {
       {/* Task List */}
       <div className="space-y-4 mb-6">
         {tasks.map((task, index) => (
-          <div key={index} className="flex items-center gap-3">
+          <div key={index} className="flex items-center gap-3 group">
             <Checkbox id={`task-${index}`} />
             <label
               htmlFor={`task-${index}`}
-              className={`text-sm ${task.color}`}
+              className={`text-sm ${task.color} transition-colors group-hover:font-semibold`}
             >
               {task.title}
             </label>
@@ -77,4 +77,3 @@ const TaskCard = () => {
 };
 
 export default TaskCard;
-
