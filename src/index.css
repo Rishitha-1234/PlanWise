@@ -119,3 +119,42 @@
   }
 }
 
+/* for fire in dashboard*/
+@keyframes flame-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 2px #ff5722,
+      0 0 4px #ff784e;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    text-shadow:
+      0 0 4px #ff5722,
+      0 0 6px #ff784e;
+    transform: translateY(-2px) scale(1.05); /* gentle upward flicker */
+  }
+}
+
+.fire-glow {
+  color: #ff5722;
+  animation: flame-glow 2.5s infinite ease-in-out;
+  display: inline-block;
+}
+
+
+/* Alarm ring in deadlines */
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(15deg); }
+}
+
+.animate-ring {
+  animation: ring 0.6s infinite;
+  display: inline-block;
+}
+
+
