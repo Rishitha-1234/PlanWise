@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#252525] w-full h-20 px-6 flex items-center shadow">
       <div className="w-full flex items-center justify-between">
-        {/* Left: Logo */}
+        {/* Left Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <Calendar size={26} className="text-white" />
           <span className="text-white font-semibold text-xl">PlanWise</span>
